@@ -9,7 +9,7 @@ const credentials = [
 ];
 
 export const Trust = () => (
-  <section id="credenciais" className="section-padding bg-background">
+  <section id="credenciais" className="section-padding bg-secondary">
     <div className="container-narrow">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
@@ -19,7 +19,7 @@ export const Trust = () => (
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {credentials.map((c) => (
-          <div key={c.title} className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border">
+          <div key={c.title} className="flex items-start gap-4 p-5 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors">
             <div className="p-2 rounded-lg bg-primary/10">
               <c.icon className="w-6 h-6 text-primary" />
             </div>

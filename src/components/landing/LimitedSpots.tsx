@@ -9,7 +9,7 @@ const reasons = [
 export const LimitedSpots = () => (
   <section className="section-padding bg-background">
     <div className="container-narrow text-center">
-      <div className="inline-flex items-center gap-2 bg-destructive/10 text-destructive px-4 py-2 rounded-full mb-6">
+      <div className="inline-flex items-center gap-2 bg-destructive/15 text-destructive px-4 py-2 rounded-full mb-6 border border-destructive/20">
         <AlertTriangle className="w-5 h-5" />
         <span className="font-bold text-sm">Vagas limitadas</span>
       </div>
