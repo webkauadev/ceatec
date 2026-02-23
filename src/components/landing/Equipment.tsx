@@ -7,36 +7,12 @@ import equipNdvi from '@/assets/equip-ndvi.jpg';
 import equipTerra from '@/assets/equip-dji-terra.jpg';
 
 const items = [
-  {
-    image: equipSpray,
-    title: 'Pulverização com drone agrícola',
-    chips: ['Prática supervisionada', 'Em campo'],
-  },
-  {
-    image: equipController,
-    title: 'Controle e telemetria',
-    chips: ['Operação real', 'Dados de voo'],
-  },
-  {
-    image: equipSafety,
-    title: 'Segurança operacional',
-    chips: ['NR 31.7', 'EPIs'],
-  },
-  {
-    image: equipRgb,
-    title: 'Mapeamento RGB',
-    chips: ['Ortomosaico', 'DJI Mini 3 / Air 2S'],
-  },
-  {
-    image: equipNdvi,
-    title: 'Mapeamento multispectral',
-    chips: ['NDVI', 'Mavic 3 Multispectral'],
-  },
-  {
-    image: equipTerra,
-    title: 'Processamento no DJI Terra',
-    chips: ['DJI Terra', 'Relatórios técnicos'],
-  },
+  { image: equipSpray, title: 'Pulverização com drone agrícola', chips: ['Prática supervisionada', 'Em campo'] },
+  { image: equipController, title: 'Controle e telemetria', chips: ['Operação real', 'Dados de voo'] },
+  { image: equipSafety, title: 'Segurança operacional', chips: ['NR 31.7', 'EPIs'] },
+  { image: equipRgb, title: 'Mapeamento RGB', chips: ['Ortomosaico', 'DJI Mini 3 / Air 2S'] },
+  { image: equipNdvi, title: 'Mapeamento multispectral', chips: ['NDVI', 'Mavic 3 Multispectral'] },
+  { image: equipTerra, title: 'Processamento no DJI Terra', chips: ['DJI Terra', 'Relatórios técnicos'] },
 ];
 
 export const Equipment = () => (
@@ -55,7 +31,7 @@ export const Equipment = () => (
         {items.map((item) => (
           <div
             key={item.title}
-            className="group rounded-xl border border-border bg-background overflow-hidden transition-shadow duration-300 hover:shadow-md"
+            className="group rounded-xl border border-border bg-card overflow-hidden transition-all duration-300 hover:border-primary/50 hover:shadow-[0_0_20px_hsl(142_76%_50%/0.1)]"
           >
             <div className="aspect-[4/3] overflow-hidden">
               <img
@@ -74,7 +50,7 @@ export const Equipment = () => (
                   <Badge
                     key={chip}
                     variant="secondary"
-                    className="text-[11px] font-medium px-2 py-0.5 rounded-full"
+                    className="text-[11px] font-medium px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20"
                   >
                     {chip}
                   </Badge>

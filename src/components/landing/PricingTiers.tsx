@@ -191,23 +191,14 @@ const CardAccordion = ({ sections }: { sections: AccordionSection[] }) => {
         className="flex items-center justify-between w-full py-3 text-xs font-semibold text-muted-foreground hover:text-foreground transition-colors"
       >
         <span>Ver conteúdo completo</span>
-        <ChevronDown
-          className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-        />
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
       </button>
-
-      <div
-        className={`grid transition-all duration-[250ms] ease-out ${
-          open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-        }`}
-      >
+      <div className={`grid transition-all duration-[250ms] ease-out ${open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
         <div className="overflow-hidden">
           <div className="pb-4 space-y-4">
             {sections.map((section) => (
               <div key={section.title}>
-                <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2">
-                  {section.title}
-                </p>
+                <p className="text-xs font-bold text-foreground uppercase tracking-wide mb-2">{section.title}</p>
                 <ul className="space-y-1.5">
                   {section.items.map((item) => (
                     <li key={item} className="flex items-start gap-2 text-xs text-muted-foreground leading-relaxed">
@@ -249,20 +240,19 @@ export const PricingTiers = () => {
           {tiers.map((tier) => (
             <div
               key={tier.level}
-              className={`relative rounded-2xl border bg-background flex flex-col transition-all duration-300 hover:-translate-y-1 ${
+              className={`relative rounded-2xl border bg-card flex flex-col transition-all duration-300 hover:-translate-y-1 ${
                 tier.highlight
-                  ? 'border-primary shadow-lg hover:shadow-xl'
-                  : 'border-border shadow-sm hover:shadow-md'
+                  ? 'border-primary shadow-[0_0_30px_hsl(142_76%_50%/0.2)]'
+                  : 'border-border shadow-sm hover:shadow-md hover:border-primary/30'
               }`}
             >
               {tier.highlight && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-5 py-1 rounded-full text-xs font-bold tracking-wide whitespace-nowrap">
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-5 py-1 rounded-full text-xs font-bold tracking-wide whitespace-nowrap neon-glow">
                   Mais escolhido
                 </div>
               )}
 
               <div className="p-7 lg:p-9 flex flex-col flex-1">
-                {/* Header */}
                 <div className="mb-5">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-2xl">{tier.badge}</span>
@@ -278,14 +268,13 @@ export const PricingTiers = () => {
                   <p className="text-sm text-muted-foreground">{tier.subtitle}</p>
                 </div>
 
-                {/* Pricing */}
                 <div className="mb-5 pb-5 border-b border-border">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-sm font-medium text-muted-foreground">12x de</span>
                     <span className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
                       R$ {tier.installment}
                     </span>
-                    <span className="inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[hsl(142_76%_92%)] text-[hsl(143_64%_24%)]">
+                    <span className="inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary/15 text-primary">
                       sem juros
                     </span>
                   </div>
@@ -293,7 +282,7 @@ export const PricingTiers = () => {
                     Pix à vista: R$ {tier.pix}
                   </p>
                   {tier.pixSavings && (
-                    <p className="text-xs font-medium text-[hsl(143_64%_24%)] mt-0.5">
+                    <p className="text-xs font-medium text-primary/80 mt-0.5">
                       Economize R$ {tier.pixSavings} no Pix
                     </p>
                   )}
@@ -307,12 +296,8 @@ export const PricingTiers = () => {
                   )}
                 </div>
 
-                {/* Audience */}
-                <p className="text-sm font-medium text-foreground mb-4">
-                  {tier.audience}
-                </p>
+                <p className="text-sm font-medium text-foreground mb-4">{tier.audience}</p>
 
-                {/* 5 bullets */}
                 <ul className="space-y-2.5 mb-5">
                   {tier.bullets.map((b) => (
                     <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
@@ -322,10 +307,8 @@ export const PricingTiers = () => {
                   ))}
                 </ul>
 
-                {/* Accordion */}
                 <CardAccordion sections={tier.accordion} />
 
-                {/* Chips — resultado */}
                 <div className="mt-5 mb-6">
                   <p className="text-[11px] font-bold text-muted-foreground uppercase tracking-wider mb-2">
                     Resultado ao concluir
@@ -335,7 +318,7 @@ export const PricingTiers = () => {
                       <Badge
                         key={chip}
                         variant="secondary"
-                        className="text-[11px] font-medium px-2.5 py-1 rounded-full"
+                        className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
                       >
                         {chip}
                       </Badge>
@@ -343,13 +326,12 @@ export const PricingTiers = () => {
                   </div>
                 </div>
 
-                {/* CTA */}
                 <Button
                   onClick={() => navigateToPreCheckout(tier)}
                   size="lg"
                   className={`w-full gap-2 min-h-[48px] h-auto py-3 font-bold text-xs tracking-wide mt-auto whitespace-normal text-center leading-tight ${
                     tier.highlight
-                      ? 'btn-primary'
+                      ? 'btn-primary neon-glow'
                       : 'bg-foreground text-background hover:bg-foreground/90'
                   }`}
                 >

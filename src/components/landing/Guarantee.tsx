@@ -12,13 +12,11 @@ export const Guarantee = () => (
   <section className="section-padding bg-secondary">
     <div className="container-narrow text-center">
       <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">Garantia de segurança</h2>
-      <p className="text-muted-foreground mb-10 max-w-xl mx-auto">
-        Sua vaga é protegida por:
-      </p>
+      <p className="text-muted-foreground mb-10 max-w-xl mx-auto">Sua vaga é protegida por:</p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {guarantees.map((g) => (
-          <div key={g.text} className="flex items-center gap-3 bg-card border border-border rounded-xl px-5 py-4">
+          <div key={g.text} className="flex items-center gap-3 bg-card border border-border rounded-xl px-5 py-4 hover:border-primary/30 transition-colors">
             <g.icon className="w-5 h-5 text-primary shrink-0" />
             <span className="font-medium text-foreground text-sm text-left">{g.text}</span>
           </div>

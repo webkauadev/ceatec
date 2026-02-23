@@ -66,8 +66,7 @@ export const Instructors = () => (
       </div>
 
       <div className="grid lg:grid-cols-5 gap-6 lg:gap-8">
-        {/* Main instructor — spans 3 cols */}
-        <div className="lg:col-span-3 rounded-2xl border border-primary/30 bg-card p-8 flex flex-col transition-all duration-300 hover:shadow-lg">
+        <div className="lg:col-span-3 rounded-2xl border border-primary/30 bg-card p-8 flex flex-col transition-all duration-300 hover:shadow-[0_0_25px_hsl(142_76%_50%/0.15)]">
           <div className="flex items-center gap-2 mb-6">
             <Badge className="bg-primary/10 text-primary border border-primary/20 text-xs font-semibold px-3 py-1">
               Coordenador Técnico
@@ -75,19 +74,16 @@ export const Instructors = () => (
           </div>
 
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
-            <div className="w-24 h-24 rounded-full bg-muted flex items-center justify-center text-3xl text-muted-foreground font-bold select-none shrink-0">
+            <div className="w-24 h-24 rounded-full bg-primary/10 border-2 border-primary/30 flex items-center justify-center text-3xl text-primary font-bold select-none shrink-0">
               CC
             </div>
             <div>
-              <h3 className="text-xl font-display font-bold text-foreground mb-1">
-                {mainInstructor.name}
-              </h3>
+              <h3 className="text-xl font-display font-bold text-foreground mb-1">{mainInstructor.name}</h3>
               <p className="text-sm text-primary font-medium mb-3">{mainInstructor.role}</p>
               <p className="text-sm text-muted-foreground leading-relaxed">{mainInstructor.bio}</p>
             </div>
           </div>
 
-          {/* Chips */}
           <div className="flex flex-wrap gap-1.5 mb-1">
             {mainInstructor.chips.map((chip) => (
               <Badge
@@ -107,7 +103,6 @@ export const Instructors = () => (
           </div>
         </div>
 
-        {/* Team areas — spans 2 cols */}
         <div className="lg:col-span-2 rounded-2xl border border-border bg-card p-8 flex flex-col">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -121,7 +116,7 @@ export const Instructors = () => (
 
           <div className="space-y-4 flex-1">
             {teamAreas.map((area) => (
-              <div key={area.title} className="bg-muted/50 rounded-xl p-4">
+              <div key={area.title} className="bg-secondary rounded-xl p-4">
                 <p className="font-semibold text-foreground text-sm mb-1">{area.title}</p>
                 <p className="text-xs text-muted-foreground">{area.desc}</p>
               </div>

@@ -19,8 +19,8 @@ export const FAQ = () => (
       </div>
       <Accordion type="single" collapsible className="max-w-2xl mx-auto space-y-4">
         {faqs.map((faq, i) => (
-          <AccordionItem key={i} value={`item-${i}`} className="bg-card rounded-lg border px-6">
-            <AccordionTrigger className="text-left font-semibold hover:no-underline">{faq.q}</AccordionTrigger>
+          <AccordionItem key={i} value={`item-${i}`} className="bg-card rounded-lg border border-border px-6 hover:border-primary/20 transition-colors">
+            <AccordionTrigger className="text-left font-semibold hover:no-underline text-foreground">{faq.q}</AccordionTrigger>
             <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
           </AccordionItem>
         ))}

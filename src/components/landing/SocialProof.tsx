@@ -8,18 +8,18 @@ const stats = [
 ];
 
 export const SocialProof = () => (
-  <section className="py-12 bg-primary">
+  <section className="py-12 bg-secondary border-y border-border">
     <div className="container-wide">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">
-            <div className="w-12 h-12 rounded-full bg-primary-foreground/15 flex items-center justify-center mx-auto mb-3">
-              <stat.icon className="w-6 h-6 text-primary-foreground" />
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <stat.icon className="w-6 h-6 text-primary" />
             </div>
-            <p className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-1">
+            <p className="text-3xl md:text-4xl font-display font-bold text-neon mb-1">
               {stat.value}
             </p>
-            <p className="text-sm text-primary-foreground/75">{stat.label}</p>
+            <p className="text-sm text-muted-foreground">{stat.label}</p>
           </div>
         ))}
       </div>

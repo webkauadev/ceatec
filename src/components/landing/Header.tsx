@@ -32,7 +32,6 @@ export const Header = () => {
       }
       lastScrollY.current = currentScrollY;
 
-      // Active section detection
       const sections = navLinks.map(l => l.href.replace('#', ''));
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
@@ -57,24 +56,22 @@ export const Header = () => {
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className={`fixed top-0 left-0 right-0 z-50 bg-background transition-shadow duration-300 ${
-        hasScrolled ? 'shadow-md' : 'shadow-none'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        hasScrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="container-wide">
         <div className="flex items-center justify-between h-20 md:h-24">
-          {/* Logo */}
           <a href="#" className="flex items-center" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <motion.img
               src={logoImage}
               alt="CEATEC"
-              className="h-14 md:h-16 w-auto"
+              className="h-14 md:h-16 w-auto brightness-0 invert"
               whileHover={{ scale: 1.04 }}
               transition={{ type: 'spring', stiffness: 300 }}
             />
           </a>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
               const sectionId = link.href.replace('#', '');
@@ -102,18 +99,16 @@ export const Header = () => {
             })}
           </nav>
 
-          {/* Desktop CTA */}
           <div className="hidden md:flex items-center">
             <Button
               onClick={() => handleNavClick('#formacao')}
-              className="btn-primary gap-2 group"
+              className="btn-primary neon-glow gap-2 group"
             >
               Garantir minha vaga
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
 
-          {/* Mobile menu toggle */}
           <motion.button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-foreground rounded-md hover:bg-muted transition-colors"
@@ -135,7 +130,6 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -143,7 +137,7 @@ export const Header = () => {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden bg-background border-t border-border overflow-hidden"
+            className="md:hidden bg-background/95 backdrop-blur-lg border-t border-border overflow-hidden"
           >
             <nav className="flex flex-col py-3">
               {navLinks.map((link, i) => {
@@ -172,7 +166,7 @@ export const Header = () => {
                 transition={{ delay: 0.15 }}
                 className="px-6 pt-3 pb-1"
               >
-                <Button onClick={() => handleNavClick('#formacao')} className="btn-primary gap-2 w-full group">
+                <Button onClick={() => handleNavClick('#formacao')} className="btn-primary neon-glow gap-2 w-full group">
                   Garantir minha vaga
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </Button>
