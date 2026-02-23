@@ -1,0 +1,234 @@
+@import "@fontsource/teko/400.css";
+@import "@fontsource/teko/500.css";
+@import "@fontsource/teko/600.css";
+@import "@fontsource/teko/700.css";
+@import "@fontsource/league-spartan/400.css";
+@import "@fontsource/league-spartan/500.css";
+@import "@fontsource/league-spartan/600.css";
+@import "@fontsource/league-spartan/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CEATEC Design System - Premium Agro Tech Aesthetic */
+
+@layer base {
+  :root {
+    /* Base colors - Clean white/black foundation */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 5%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 5%;
+
+    /* Primary - CEATEC Green */
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Clean surface */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+
+    /* Muted tones */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - CEATEC Yellow/Gold */
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 5%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 142 71% 45%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens for CEATEC */
+    --ceatec-green: 142 71% 45%;
+    --ceatec-green-dark: 142 71% 35%;
+    --ceatec-yellow: 45 93% 47%;
+    --ceatec-yellow-light: 45 93% 60%;
+    --ceatec-black: 0 0% 5%;
+    --ceatec-white: 0 0% 100%;
+    --ceatec-gray: 0 0% 45%;
+    --ceatec-gray-light: 0 0% 96%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.7), hsl(0 0% 0% / 0.4));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--ceatec-green)), hsl(var(--ceatec-green-dark)));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(0 0% 0% / 0.1), 0 8px 10px -6px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(var(--ceatec-green) / 0.3);
+
+    /* Typography */
+    --font-display: "Teko", sans-serif;
+    --font-body: "League Spartan", sans-serif;
+
+    /* Sidebar (keeping defaults) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 45 93% 47%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 142 71% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .container-narrow {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Button variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200;
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-primary:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-whatsapp {
+    @apply bg-[hsl(142_70%_49%)] text-white hover:bg-[hsl(142_70%_42%)] transition-all duration-200;
+  }
+
+  .btn-outline-dark {
+    @apply border-2 border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-200;
+  }
+
+  /* Card styles */
+  .card-elevated {
+    @apply bg-card rounded-lg border border-border;
+    box-shadow: var(--shadow-md);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Trust badge */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 px-3 py-1.5 bg-secondary rounded-full text-sm font-medium text-secondary-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--ceatec-green)), hsl(var(--ceatec-yellow)));
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
