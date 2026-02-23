@@ -1,138 +1,140 @@
 
 
-# Analise da Landing Page CEATEC -- Pontos de Melhoria
+# Restyle CEATEC Landing Page -- Estetica Dark + Green Agressiva
 
-## Resumo da Analise
-
-A LP tem uma estrutura solida de funil (Hero > Equipamentos > Pricing > Mapeamento > Trust > Instrutores > Garantia > Escassez > FAQ > CTA Final > Footer), mas apresenta oportunidades claras de melhoria em conversao, credibilidade e UX.
+Inspirado no visual de pilotoderaca.com.br, vamos transformar toda a landing page para um visual escuro, premium e agressivo, mantendo todo o conteudo e funcionalidade da CEATEC.
 
 ---
 
-## 1. HERO -- Melhorias de Impacto
+## O que muda (resumo visual)
 
-**Problema:** O subtitulo "Regularize, opere e evolua ate o nivel especialista em pulverizacao e mapeamento" e generico e nao comunica o diferencial competitivo.
-
-**Ajuste proposto:**
-- Adicionar um **badge de prova social** acima do titulo (ex: "+200 pilotos formados" ou "Unico centro DJI Academy Agriculture da regiao Norte")
-- Subtitulo mais orientado a beneficio: "Saia regularizado, certificado pela DJI e pronto para faturar com drones agricolas"
-- Adicionar **micro-prova social** abaixo do CTA (ex: logos de parceiros, ou "Reconhecido pelo Ministerio da Agricultura")
-
----
-
-## 2. SECAO DE EQUIPAMENTOS -- Ajuste de Posicionamento
-
-**Problema:** A secao "Equipamentos e pratica em campo" aparece ANTES do pricing. Isso atrasa o usuario de ver os precos e tomar a decisao.
-
-**Ajuste proposto:**
-- **Mover a secao de Equipamentos para DEPOIS do Pricing**, ou transformar em uma faixa mais compacta dentro do hero/trust
-- A ordem ideal seria: Hero > Pricing > Trust/Credenciais > Equipamentos > Mapeamento > Instrutores > Garantia > FAQ > CTA
+- **Fundo geral**: de branco para preto/cinza escuro
+- **Tipografia**: mais bold, mais grande, com destaques em verde neon
+- **Botoes CTA**: verde brilhante com glow neon
+- **Cards**: fundo escuro com bordas sutis, hover com brilho verde
+- **Secoes alternando**: tons de preto (#0a0a0a, #111, #161616)
+- **Linhas decorativas**: linhas diagonais verdes como no site referencia
 
 ---
 
-## 3. PRICING CARDS -- Melhorias de Conversao
+## Etapas de implementacao
 
-**Problemas identificados:**
-- A diferenca de preco entre Profissional (R$ 4.497) e Expert (R$ 4.897) e de apenas R$ 400, mas isso nao esta destacado -- perda de upsell
-- O card "Mais escolhido" nao tem contraste visual forte o suficiente
-- Falta **ancoragem de preco** (mostrar economia do Pix vs credito de forma mais evidente)
+### 1. CSS Global (src/index.css)
+- Inverter o tema base para escuro (background preto, foreground branco)
+- Ajustar `--primary` para um verde neon mais vibrante (142 76% 50%)
+- Ajustar `--card`, `--secondary`, `--muted` para tons escuros
+- Adicionar estilos de glow mais agressivos nos botoes
+- Adicionar classe utilitaria para linhas decorativas diagonais verdes
 
-**Ajustes propostos:**
-- Adicionar um callout no card Expert: "Apenas +R$ 400 vs Profissional" para incentivar upgrade
-- Aumentar contraste do card destacado (fundo levemente diferente, borda mais grossa)
-- Mostrar **economia em reais** ao lado do preco Pix (ex: "Economize R$ 481,48")
+### 2. Header (Header.tsx)
+- Fundo transparente/preto com blur
+- Logo claro sobre fundo escuro
+- Links de navegacao em branco/cinza claro
+- CTA verde neon com glow
 
----
+### 3. Hero (Hero.tsx)
+- Manter imagem de fundo com overlay mais escuro
+- Titulo maior e mais bold com palavras-chave destacadas em verde neon
+- Badge DJI Academy com borda verde brilhante
+- Botao CTA com efeito glow verde forte
+- Card de turmas com fundo glass escuro
 
-## 4. INSTRUTORES -- Problema de Credibilidade
+### 4. SocialProof (SocialProof.tsx)
+- Fundo preto com numeros em verde neon
+- Icones com glow sutil
 
-**Problema critico:** 2 dos 3 instrutores aparecem como **"Instrutor a definir"** com avatar de iniciais genericas. Isso prejudica seriamente a credibilidade da formacao.
+### 5. PricingTiers (PricingTiers.tsx)
+- Cards com fundo escuro (#111) e borda cinza escuro
+- Card destacado com borda verde neon e shadow glow
+- Badge "Mais escolhido" em verde neon
+- Precos em branco, destaques em verde
+- Botoes CTA verdes com glow
 
-**Ajustes propostos:**
-- **Remover os instrutores indefinidos** e manter apenas o Eng. Claudevan Camargo com destaque
-- Ou substituir por um formato tipo "Equipe tecnica" sem cards individuais vazios
-- Adicionar foto real do instrutor confirmado
+### 6. Trust (Trust.tsx)
+- Cards escuros com icones verdes
+- Texto branco/cinza claro
 
----
+### 7. Equipment (Equipment.tsx)
+- Fundo escuro, cards com borda escura
+- Hover com brilho verde na borda
+- Chips em verde escuro com texto verde claro
 
-## 5. SECAO DE GARANTIA -- Fraca
+### 8. MappingShowcase (MappingShowcase.tsx)
+- Fundo section escuro alternado
+- Texto verde no label "Formacao Expert"
+- Cards de imagem com borda escura
 
-**Problema:** A secao "Garantia de seguranca" so mostra 3 itens genericos (Checkout seguro, Certificacoes, Suporte). Nao ha garantia de satisfacao ou reembolso.
+### 9. Instructors (Instructors.tsx)
+- Cards escuros, badges verdes
+- Avatar com borda verde
 
-**Ajuste proposto:**
-- Se ha politica de reembolso, incluir explicitamente
-- Adicionar "Certificado reconhecido pelo Ministerio da Agricultura" como item de garantia
-- Incluir selo ou badge visual de seguranca
+### 10. Guarantee (Guarantee.tsx)
+- Fundo escuro, icones verdes
+- Cards com fundo glass escuro
 
----
+### 11. LimitedSpots (LimitedSpots.tsx)
+- Fundo escuro, badge de urgencia em vermelho sobre fundo escuro
+- Bullets com pontos verdes
 
-## 6. FAQ -- Adicionar Perguntas Estrategicas
+### 12. FAQ (FAQ.tsx)
+- Accordion escuro com bordas sutis
+- Triggers em branco, conteudo em cinza claro
 
-**Problema:** Faltam perguntas que removem objecoes financeiras.
+### 13. FinalCTA (FinalCTA.tsx)
+- Fundo verde escuro com gradiente
+- Botao branco sobre verde
 
-**Perguntas a adicionar:**
-- "Posso parcelar em quantas vezes?" (reforcar 12x sem juros)
-- "Tem desconto para pagamento a vista?" (reforcar economia no Pix)
-- "Qual o retorno financeiro de quem se forma?" (prova de ROI)
-
----
-
-## 7. PROVA SOCIAL -- Ausente
-
-**Problema grave:** Nao ha nenhum depoimento, numero de alunos formados, ou resultado concreto em toda a LP.
-
-**Ajuste proposto:**
-- Adicionar secao de **depoimentos/resultados** entre Trust e Instrutores
-- Ou pelo menos um **banner de numeros** (ex: "+200 pilotos formados", "15 turmas realizadas", "2 estados atendidos")
-
----
-
-## 8. MOBILE UX -- Verificacao
-
-**Problema potencial:** Os 3 pricing cards empilhados no mobile podem ficar muito longos. O usuario precisa fazer muito scroll para comparar.
-
-**Ajuste proposto:**
-- Considerar tabs ou swipe para os cards no mobile
-- Ou um modo de comparacao simplificado
-
----
-
-## 9. BUGS E DETALHES TECNICOS
-
-- **Bug no PreCheckout.tsx (linha 184):** `window.location.href = finalUrl;` esta **duplicado** (aparece 2x seguidas)
-- **Tracking incompleto:** Os IDs do Meta Pixel e Google Ads estao com placeholders ("AW-CONVERSION_ID") -- nenhum tracking real esta funcionando
-- **whatsapp.ts (linha 2):** Comentario "FALTA DEFINIR" ainda presente, mas o numero ja esta correto -- limpar comentario
-- **tracking.ts (linha 2):** Comentario "FALTA DEFINIR" ainda presente
+### 14. Footer (Footer.tsx)
+- Fundo preto puro, texto cinza
 
 ---
 
-## 10. FOOTER -- Ajustes Menores
+## Detalhes tecnicos
 
-- Links "Politica de Privacidade" e "Termos de Uso" apontam para "#" (nao funcionam)
-- Considerar adicionar CNPJ da empresa para mais credibilidade
+### Mudancas no index.css (arquivo principal)
+As variaveis CSS do `:root` serao invertidas para tema escuro por padrao:
 
----
+```text
+--background: 0 0% 4%        (quase preto)
+--foreground: 0 0% 95%       (branco suave)
+--card: 0 0% 7%              (cinza muito escuro)
+--secondary: 0 0% 10%        (cinza escuro)
+--muted: 0 0% 15%            (cinza medio-escuro)
+--muted-foreground: 0 0% 60% (cinza claro)
+--border: 0 0% 15%           (borda sutil)
+--primary: 142 76% 50%       (verde neon mais vibrante)
+```
 
-## Secao Tecnica -- Implementacao
+Adicionar novos utilitarios:
+- `.neon-glow` -- box-shadow verde neon para botoes
+- `.text-neon` -- text-shadow verde para titulos destacados
+- `.diagonal-line` -- pseudo-elemento para linhas diagonais decorativas
 
-### Arquivos a modificar:
-1. `src/components/landing/Hero.tsx` -- badge de prova social, subtitulo melhorado
-2. `src/components/landing/PricingTiers.tsx` -- callout de upsell Expert, economia Pix
-3. `src/components/landing/Instructors.tsx` -- remover instrutores indefinidos
-4. `src/components/landing/Guarantee.tsx` -- itens mais fortes
-5. `src/components/landing/FAQ.tsx` -- perguntas adicionais
-6. `src/pages/Index.tsx` -- reordenar secoes (Equipment depois de Pricing)
-7. `src/pages/PreCheckout.tsx` -- remover linha duplicada (184)
-8. `src/lib/tracking.ts` -- limpar comentarios placeholder
-9. `src/lib/whatsapp.ts` -- limpar comentario placeholder
-10. **Novo componente:** `src/components/landing/SocialProof.tsx` -- numeros/depoimentos
+### Mudancas nos componentes
+Todas as classes que usam `bg-background`, `text-foreground`, `bg-card`, etc. ja vao herdar o tema escuro automaticamente pelas variaveis CSS. Ajustes pontuais:
 
-### Ordem de implementacao:
-1. Corrigir bugs (duplicata PreCheckout, comentarios)
-2. Remover instrutores indefinidos
-3. Adicionar prova social (numeros)
-4. Melhorar Hero (badge + subtitulo)
-5. Ajustar pricing (upsell + economia)
-6. Reordenar secoes
-7. Expandir FAQ
-8. Fortalecer garantia
+- **Header**: `bg-background/80 backdrop-blur-lg` em vez de `bg-background`
+- **Hero**: overlay mais forte, texto com `text-neon` nas palavras-chave
+- **PricingTiers**: card highlight com `shadow-[0_0_30px_hsl(142_76%_50%/0.2)]`
+- **Botoes CTA**: adicionar classe `neon-glow` em hover
+- **Equipment cards**: `hover:border-primary/50` para glow verde no hover
+
+### Arquivos modificados (11 arquivos)
+1. `src/index.css` -- variaveis de tema + utilitarios
+2. `src/components/landing/Header.tsx` -- fundo transparente blur
+3. `src/components/landing/Hero.tsx` -- destaques neon, overlay
+4. `src/components/landing/SocialProof.tsx` -- numeros neon
+5. `src/components/landing/PricingTiers.tsx` -- cards escuros, glow
+6. `src/components/landing/Trust.tsx` -- ajustes de cor
+7. `src/components/landing/Equipment.tsx` -- hover verde
+8. `src/components/landing/MappingShowcase.tsx` -- fundo escuro
+9. `src/components/landing/Instructors.tsx` -- cards escuros
+10. `src/components/landing/Guarantee.tsx` -- fundo escuro
+11. `src/components/landing/FAQ.tsx` -- accordion escuro
+12. `src/components/landing/FinalCTA.tsx` -- gradiente verde
+13. `src/components/landing/LimitedSpots.tsx` -- ajustes
+14. `src/components/landing/Footer.tsx` -- ajustes menores
+
+### Nenhum pacote novo necessario
+Tudo sera feito com Tailwind CSS e as variaveis CSS existentes.
 
