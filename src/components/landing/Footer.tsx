@@ -14,7 +14,7 @@ export const Footer = () => (
             <div className="h-8 border-l border-foreground/20" />
             <img src={logoDji} alt="DJI Agriculture" className="h-7 brightness-0 invert" />
             <div className="h-8 border-l border-foreground/20" />
-            <img src={logoMapa} alt="Ministério da Agricultura" className="h-12" />
+            <img src={logoMapa} alt="Ministério da Agricultura" className="h-24" />
           </div>
           <p className="text-sm text-center md:text-left">CEATEC LTDA — Centro Educacional, Assessoria, Tecnologia e Crédito.</p>
           <p className="text-xs opacity-60">Av. José do Patrocínio, 4515 - Centro, Vilhena - RO, 76980-180</p>

@@ -14,7 +14,7 @@ export const Trust = () => (
     <div className="container-narrow">
       <div className="text-center mb-12">
         <div className="flex items-center justify-center gap-3 mb-6">
-          <img src={logoMapa} alt="Ministério da Agricultura" className="h-14" />
+          <img src={logoMapa} alt="Ministério da Agricultura" className="h-28" />
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
           Por que confiar nesta formação
