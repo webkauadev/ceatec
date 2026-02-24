@@ -1,5 +1,6 @@
 import { ArrowRight, CalendarDays } from 'lucide-react';
 import logoDji from '@/assets/logo-dji-agriculture.png';
+import logoMapa from '@/assets/logo-mapa.png';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-drone-spray.jpg';
 
@@ -26,7 +27,7 @@ export const Hero = () => {
           <div className="max-w-xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/15 backdrop-blur-sm border border-primary/40 rounded-full px-4 py-1.5 mb-6 animate-slide-up">
-              <img src={logoDji} alt="DJI" className="h-4 w-auto brightness-0 invert" />
+              <img src={logoDji} alt="DJI" className="h-3 w-auto brightness-0 invert" />
               <span className="text-xs font-semibold text-primary">Centro DJI Academy Agriculture</span>
             </div>
 
@@ -71,6 +72,7 @@ export const Hero = () => {
             <div className="flex items-center gap-4 mt-6 animate-slide-up" style={{ animationDelay: '0.25s' }}>
               <span className="text-xs text-white/40">+200 pilotos formados</span>
               <span className="w-1 h-1 rounded-full bg-primary/50" />
+              <img src={logoMapa} alt="MAPA" className="h-8" />
               <span className="text-xs text-white/40">Reconhecido pelo MAPA</span>
             </div>
           </div>

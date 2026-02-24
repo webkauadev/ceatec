@@ -1,4 +1,5 @@
 import { Award, Leaf, HardHat, Wrench, Mountain } from 'lucide-react';
+import logoMapa from '@/assets/logo-mapa.png';
 
 const credentials = [
   { icon: Award, title: 'Instrutores credenciados DJI', desc: 'Certificação oficial DJI Academy' },
@@ -12,6 +13,9 @@ export const Trust = () => (
   <section id="credenciais" className="section-padding bg-secondary">
     <div className="container-narrow">
       <div className="text-center mb-12">
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <img src={logoMapa} alt="Ministério da Agricultura" className="h-14" />
+        </div>
         <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
           Por que confiar nesta formação
         </h2>
