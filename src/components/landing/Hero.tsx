@@ -2,7 +2,7 @@ import { ArrowRight, CalendarDays } from 'lucide-react';
 import logoDji from '@/assets/logo-dji-agriculture.png';
 import logoMapa from '@/assets/logo-mapa.png';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-drone-spray.jpg';
+const heroImage = 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=1920&q=80&auto=format&fit=crop';
 
 export const Hero = () => {
   const scrollToPlans = () => {
