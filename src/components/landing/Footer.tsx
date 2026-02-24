@@ -1,6 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import logoImage from '@/assets/logo-ceatec.png';
 import logoDji from '@/assets/logo-dji-agriculture.png';
+import logoMapa from '@/assets/logo-mapa.png';
 import { openWhatsApp } from '@/lib/whatsapp';
 
 export const Footer = () => (
@@ -10,8 +11,10 @@ export const Footer = () => (
         <div className="flex flex-col items-center md:items-start gap-3">
           <div className="flex items-center gap-3">
             <img src={logoImage} alt="CEATEC" className="h-20 brightness-0 invert" />
-            <div className="h-10 border-l border-foreground/20" />
-            <img src={logoDji} alt="DJI Agriculture" className="h-10 brightness-0 invert" />
+            <div className="h-8 border-l border-foreground/20" />
+            <img src={logoDji} alt="DJI Agriculture" className="h-7 brightness-0 invert" />
+            <div className="h-8 border-l border-foreground/20" />
+            <img src={logoMapa} alt="Ministério da Agricultura" className="h-12" />
           </div>
           <p className="text-sm text-center md:text-left">CEATEC LTDA — Centro Educacional, Assessoria, Tecnologia e Crédito.</p>
           <p className="text-xs opacity-60">Av. José do Patrocínio, 4515 - Centro, Vilhena - RO, 76980-180</p>

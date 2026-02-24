@@ -71,11 +71,11 @@ export const Header = () => {
               whileHover={{ scale: 1.04 }}
               transition={{ type: 'spring', stiffness: 300 }}
             />
-            <div className="h-8 border-l border-foreground/20" />
+            <div className="h-6 border-l border-foreground/20" />
             <img
               src={logoDji}
               alt="DJI Agriculture"
-              className="h-8 md:h-10 w-auto brightness-0 invert"
+              className="h-5 md:h-7 w-auto brightness-0 invert"
             />
           </a>
 
