@@ -72,7 +72,7 @@ export const Hero = () => {
             <div className="flex items-center gap-4 mt-6 animate-slide-up" style={{ animationDelay: '0.25s' }}>
               <span className="text-xs text-white/40">+200 pilotos formados</span>
               <span className="w-1 h-1 rounded-full bg-primary/50" />
-              <img src={logoMapa} alt="MAPA" className="h-8" />
+              <img src={logoMapa} alt="MAPA" className="h-16" />
               <span className="text-xs text-white/40">Reconhecido pelo MAPA</span>
             </div>
           </div>
