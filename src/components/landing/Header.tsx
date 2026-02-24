@@ -3,6 +3,7 @@ import { Menu, X, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import logoImage from '@/assets/logo-ceatec.png';
+import logoDji from '@/assets/logo-dji-agriculture.png';
 
 const navLinks = [
   { label: 'Formação', href: '#formacao' },
@@ -62,13 +63,19 @@ export const Header = () => {
     >
       <div className="container-wide">
         <div className="flex items-center justify-between h-20 md:h-24">
-          <a href="#" className="flex items-center" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          <a href="#" className="flex items-center gap-3" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <motion.img
               src={logoImage}
               alt="CEATEC"
               className="h-14 md:h-16 w-auto brightness-0 invert"
               whileHover={{ scale: 1.04 }}
               transition={{ type: 'spring', stiffness: 300 }}
+            />
+            <div className="h-8 border-l border-foreground/20" />
+            <img
+              src={logoDji}
+              alt="DJI Agriculture"
+              className="h-8 md:h-10 w-auto brightness-0 invert"
             />
           </a>
 

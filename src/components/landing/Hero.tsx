@@ -1,4 +1,5 @@
-import { ArrowRight, CalendarDays, Shield } from 'lucide-react';
+import { ArrowRight, CalendarDays } from 'lucide-react';
+import logoDji from '@/assets/logo-dji-agriculture.png';
 import { Button } from '@/components/ui/button';
 import heroImage from '@/assets/hero-drone-spray.jpg';
 
@@ -25,7 +26,7 @@ export const Hero = () => {
           <div className="max-w-xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-primary/15 backdrop-blur-sm border border-primary/40 rounded-full px-4 py-1.5 mb-6 animate-slide-up">
-              <Shield className="w-4 h-4 text-primary" />
+              <img src={logoDji} alt="DJI" className="h-4 w-auto brightness-0 invert" />
               <span className="text-xs font-semibold text-primary">Centro DJI Academy Agriculture</span>
             </div>
 
