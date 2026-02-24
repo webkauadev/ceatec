@@ -1,140 +1,87 @@
 
 
-# Restyle CEATEC Landing Page -- Estetica Dark + Green Agressiva
+# Plano: Adicionar logo DJI Agriculture + Substituir imagens por fotos reais de drones DJI
 
-Inspirado no visual de pilotoderaca.com.br, vamos transformar toda a landing page para um visual escuro, premium e agressivo, mantendo todo o conteudo e funcionalidade da CEATEC.
+## Resumo
 
----
-
-## O que muda (resumo visual)
-
-- **Fundo geral**: de branco para preto/cinza escuro
-- **Tipografia**: mais bold, mais grande, com destaques em verde neon
-- **Botoes CTA**: verde brilhante com glow neon
-- **Cards**: fundo escuro com bordas sutis, hover com brilho verde
-- **Secoes alternando**: tons de preto (#0a0a0a, #111, #161616)
-- **Linhas decorativas**: linhas diagonais verdes como no site referencia
+Duas mudancas principais:
+1. Adicionar a logo "DJI Agriculture" ao lado da logo CEATEC no Header, Footer e Hero
+2. Substituir todas as 8 imagens de placeholder/IA por fotos reais de drones DJI Agriculture
 
 ---
 
-## Etapas de implementacao
+## Parte 1: Logo DJI Agriculture
 
-### 1. CSS Global (src/index.css)
-- Inverter o tema base para escuro (background preto, foreground branco)
-- Ajustar `--primary` para um verde neon mais vibrante (142 76% 50%)
-- Ajustar `--card`, `--secondary`, `--muted` para tons escuros
-- Adicionar estilos de glow mais agressivos nos botoes
-- Adicionar classe utilitaria para linhas decorativas diagonais verdes
+### Arquivo de imagem
+- Copiar o upload `user-uploads://46689835-25dd-4c0e-92d0-94dee3c438ad_removalai_preview.png` para `src/assets/logo-dji-agriculture.png`
+- A segunda imagem (Ministerio da Agricultura) sera guardada para uso futuro se necessario: `src/assets/logo-mapa.png`
 
-### 2. Header (Header.tsx)
-- Fundo transparente/preto com blur
-- Logo claro sobre fundo escuro
-- Links de navegacao em branco/cinza claro
-- CTA verde neon com glow
+### Header (Header.tsx)
+- Importar `logoDji` de `@/assets/logo-dji-agriculture.png`
+- Ao lado da logo CEATEC, adicionar um separador vertical fino (`|` ou `border-l`) e a logo DJI Agriculture
+- Layout: `[CEATEC logo] | [DJI Agriculture logo]` alinhados horizontalmente
+- A logo DJI recebe `brightness-0 invert` igual a CEATEC para ficar branca no tema escuro
+- Altura da DJI: `h-8 md:h-10` (menor que a CEATEC para hierarquia visual)
 
-### 3. Hero (Hero.tsx)
-- Manter imagem de fundo com overlay mais escuro
-- Titulo maior e mais bold com palavras-chave destacadas em verde neon
-- Badge DJI Academy com borda verde brilhante
-- Botao CTA com efeito glow verde forte
-- Card de turmas com fundo glass escuro
+### Footer (Footer.tsx)
+- Mesmo padrao: adicionar logo DJI Agriculture ao lado da CEATEC
+- Layout horizontal com separador
 
-### 4. SocialProof (SocialProof.tsx)
-- Fundo preto com numeros em verde neon
-- Icones com glow sutil
+### Hero (Hero.tsx)
+- No badge existente "Centro DJI Academy Agriculture", substituir o icone Shield pela logo DJI Agriculture em miniatura (`h-4`)
+- Ou: adicionar uma barra de logos abaixo do micro proof com CEATEC + DJI Agriculture + MAPA
 
-### 5. PricingTiers (PricingTiers.tsx)
-- Cards com fundo escuro (#111) e borda cinza escuro
-- Card destacado com borda verde neon e shadow glow
-- Badge "Mais escolhido" em verde neon
-- Precos em branco, destaques em verde
-- Botoes CTA verdes com glow
+---
 
-### 6. Trust (Trust.tsx)
-- Cards escuros com icones verdes
-- Texto branco/cinza claro
+## Parte 2: Substituir imagens por fotos reais
 
-### 7. Equipment (Equipment.tsx)
-- Fundo escuro, cards com borda escura
-- Hover com brilho verde na borda
-- Chips em verde escuro com texto verde claro
+### Imagens atuais (todas provavelmente geradas por IA)
+1. `hero-drone-spray.jpg` -- Hero background (drone pulverizando)
+2. `equip-spray-drone.jpg` -- Equipment: pulverizacao
+3. `equip-controller.jpg` -- Equipment: controle
+4. `equip-safety.jpg` -- Equipment: seguranca
+5. `equip-rgb-map.jpg` -- Equipment: mapa RGB
+6. `equip-ndvi.jpg` -- Equipment: NDVI
+7. `equip-dji-terra.jpg` -- Equipment: DJI Terra
+8. `mapping-ortho.jpg` -- MappingShowcase: ortomosaico
+9. `mapping-ndvi.jpg` -- MappingShowcase: NDVI
 
-### 8. MappingShowcase (MappingShowcase.tsx)
-- Fundo section escuro alternado
-- Texto verde no label "Formacao Expert"
-- Cards de imagem com borda escura
+### Estrategia para imagens reais
+Como o usuario nao forneceu as fotos reais, ha duas opcoes:
 
-### 9. Instructors (Instructors.tsx)
-- Cards escuros, badges verdes
-- Avatar com borda verde
+**Opcao A (recomendada):** O usuario fornece as fotos reais dos drones DJI (ex: DJI Agras T40, T25, Mavic 3 Multispectral) e eu substituo cada arquivo mantendo os mesmos nomes.
 
-### 10. Guarantee (Guarantee.tsx)
-- Fundo escuro, icones verdes
-- Cards com fundo glass escuro
+**Opcao B:** Uso imagens de alta qualidade de fontes livres (Unsplash, Pexels) de drones agricolas reais DJI. Porem a qualidade e autenticidade pode variar.
 
-### 11. LimitedSpots (LimitedSpots.tsx)
-- Fundo escuro, badge de urgencia em vermelho sobre fundo escuro
-- Bullets com pontos verdes
+### Arquivos modificados
+- Nenhuma mudanca de codigo necessaria se as novas imagens mantiverem os mesmos nomes de arquivo
+- Basta substituir os 9 arquivos `.jpg` em `src/assets/`
 
-### 12. FAQ (FAQ.tsx)
-- Accordion escuro com bordas sutis
-- Triggers em branco, conteudo em cinza claro
+---
 
-### 13. FinalCTA (FinalCTA.tsx)
-- Fundo verde escuro com gradiente
-- Botao branco sobre verde
+## Arquivos modificados
 
-### 14. Footer (Footer.tsx)
-- Fundo preto puro, texto cinza
+| Arquivo | Mudanca |
+|---------|---------|
+| `src/assets/logo-dji-agriculture.png` | Novo -- logo DJI Agriculture (do upload) |
+| `src/assets/logo-mapa.png` | Novo -- logo MAPA (do upload) |
+| `src/components/landing/Header.tsx` | Adicionar logo DJI ao lado da CEATEC |
+| `src/components/landing/Footer.tsx` | Adicionar logo DJI ao lado da CEATEC |
+| `src/components/landing/Hero.tsx` | Atualizar badge com logo DJI |
+| `src/assets/*.jpg` (9 arquivos) | Substituir por fotos reais (pendente envio pelo usuario) |
 
 ---
 
 ## Detalhes tecnicos
 
-### Mudancas no index.css (arquivo principal)
-As variaveis CSS do `:root` serao invertidas para tema escuro por padrao:
-
+### Header -- layout das logos
 ```text
---background: 0 0% 4%        (quase preto)
---foreground: 0 0% 95%       (branco suave)
---card: 0 0% 7%              (cinza muito escuro)
---secondary: 0 0% 10%        (cinza escuro)
---muted: 0 0% 15%            (cinza medio-escuro)
---muted-foreground: 0 0% 60% (cinza claro)
---border: 0 0% 15%           (borda sutil)
---primary: 142 76% 50%       (verde neon mais vibrante)
+[CEATEC h-14] [border-l border-white/20 h-8] [DJI Agriculture h-8]
 ```
+Ambas dentro do mesmo `<a>` ou em `<div className="flex items-center gap-3">`.
 
-Adicionar novos utilitarios:
-- `.neon-glow` -- box-shadow verde neon para botoes
-- `.text-neon` -- text-shadow verde para titulos destacados
-- `.diagonal-line` -- pseudo-elemento para linhas diagonais decorativas
-
-### Mudancas nos componentes
-Todas as classes que usam `bg-background`, `text-foreground`, `bg-card`, etc. ja vao herdar o tema escuro automaticamente pelas variaveis CSS. Ajustes pontuais:
-
-- **Header**: `bg-background/80 backdrop-blur-lg` em vez de `bg-background`
-- **Hero**: overlay mais forte, texto com `text-neon` nas palavras-chave
-- **PricingTiers**: card highlight com `shadow-[0_0_30px_hsl(142_76%_50%/0.2)]`
-- **Botoes CTA**: adicionar classe `neon-glow` em hover
-- **Equipment cards**: `hover:border-primary/50` para glow verde no hover
-
-### Arquivos modificados (11 arquivos)
-1. `src/index.css` -- variaveis de tema + utilitarios
-2. `src/components/landing/Header.tsx` -- fundo transparente blur
-3. `src/components/landing/Hero.tsx` -- destaques neon, overlay
-4. `src/components/landing/SocialProof.tsx` -- numeros neon
-5. `src/components/landing/PricingTiers.tsx` -- cards escuros, glow
-6. `src/components/landing/Trust.tsx` -- ajustes de cor
-7. `src/components/landing/Equipment.tsx` -- hover verde
-8. `src/components/landing/MappingShowcase.tsx` -- fundo escuro
-9. `src/components/landing/Instructors.tsx` -- cards escuros
-10. `src/components/landing/Guarantee.tsx` -- fundo escuro
-11. `src/components/landing/FAQ.tsx` -- accordion escuro
-12. `src/components/landing/FinalCTA.tsx` -- gradiente verde
-13. `src/components/landing/LimitedSpots.tsx` -- ajustes
-14. `src/components/landing/Footer.tsx` -- ajustes menores
-
-### Nenhum pacote novo necessario
-Tudo sera feito com Tailwind CSS e as variaveis CSS existentes.
+### Prerequisito para as imagens
+O usuario precisa enviar as 9 fotos reais de drones DJI. Sem elas, posso:
+- Implementar apenas a parte das logos agora
+- Aguardar as fotos para a substituicao
 
