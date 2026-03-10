@@ -15,7 +15,7 @@ const preCheckoutFaqs = [
   { q: 'Preciso ter drone?', a: 'Não. Você pode iniciar sua formação mesmo sem drone. No presencial, fornecemos os equipamentos para prática.' },
   { q: 'O curso é ao vivo?', a: 'Sim! As aulas online são 100% ao vivo com interação direta com os instrutores.' },
   { q: 'Como funciona o presencial?', a: '3 dias de prática intensiva em campo, com equipamentos reais e instrutores certificados.' },
-  { q: 'Posso pagar com Pix ou cartão?', a: 'Sim! Aceitamos Pix à vista ou até 12x sem juros no cartão de crédito.' },
+  { q: 'Posso pagar com Pix ou cartão?', a: 'Sim! Aceitamos Pix à vista ou até 12x no cartão de crédito.' },
   { q: 'Como recebo a confirmação?', a: 'Após o pagamento, você receberá um e-mail com os acessos e instruções por WhatsApp.' },
 ];
 
@@ -261,7 +261,7 @@ const PreCheckout = () => {
                     {method === 'cartao' ? 'Cartão' : 'Pix'}
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {method === 'cartao' ? 'até 12x sem juros' : 'à vista'}
+                    {method === 'cartao' ? 'até 12x no cartão' : 'à vista'}
                   </p>
                 </button>
               ))}
@@ -275,11 +275,7 @@ const PreCheckout = () => {
                 <div className="flex items-center justify-center gap-2 flex-wrap">
                   <span className="text-sm text-muted-foreground">12x de</span>
                   <span className="text-3xl md:text-4xl font-bold text-foreground">R$ {course.installment}</span>
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[hsl(142_76%_92%)] text-[hsl(143_64%_24%)]">
-                    sem juros
-                  </span>
                 </div>
-                <p className="text-xs text-muted-foreground">Total no crédito: R$ {course.totalCredito}</p>
               </>
             ) : (
               <div>

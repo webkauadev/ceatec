@@ -274,9 +274,6 @@ export const PricingTiers = () => {
                     <span className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
                       R$ {tier.installment}
                     </span>
-                    <span className="inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full bg-primary/15 text-primary">
-                      sem juros
-                    </span>
                   </div>
                   <p className="text-base font-semibold text-primary mt-2">
                     Pix à vista: R$ {tier.pix}
@@ -286,9 +283,6 @@ export const PricingTiers = () => {
                       Economize R$ {tier.pixSavings} no Pix
                     </p>
                   )}
-                  <p className="text-xs text-muted-foreground mt-1">
-                    Total no crédito: R$ {tier.total}
-                  </p>
                   {tier.upsellNote && (
                     <p className="text-xs font-semibold text-primary mt-2 bg-primary/10 rounded-full px-3 py-1 inline-block">
                       {tier.upsellNote}
