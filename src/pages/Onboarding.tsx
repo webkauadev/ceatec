@@ -90,7 +90,7 @@ const Onboarding = () => {
       <div className="min-h-screen bg-background">
         <div className="max-w-lg mx-auto px-4 py-12 space-y-8">
           <div className="text-center">
-            <img src={logoCeatec} alt="CEATEC" className="h-20 mx-auto mb-8" />
+            <img src={logoCeatec} alt="CEATEC" className="h-20 mx-auto mb-8 brightness-0 invert" />
           </div>
 
           {/* Header */}
