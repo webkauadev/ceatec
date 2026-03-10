@@ -202,7 +202,7 @@ const PreCheckout = () => {
             <ChevronLeft className="w-4 h-4" />
             Voltar
           </button>
-          <img src={logoCeatec} alt="CEATEC" className="h-16" />
+          <img src={logoCeatec} alt="CEATEC" className="h-16 brightness-0 invert" />
         </div>
       </header>
 
