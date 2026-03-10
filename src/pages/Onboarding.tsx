@@ -62,7 +62,7 @@ const Onboarding = () => {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
         <div className="max-w-md w-full text-center space-y-6">
-          <img src={logoCeatec} alt="CEATEC" className="h-20 mx-auto" />
+          <img src={logoCeatec} alt="CEATEC" className="h-20 mx-auto brightness-0 invert" />
           <div className="space-y-2">
             <h1 className="text-2xl font-bold text-foreground">Página não encontrada</h1>
             <p className="text-muted-foreground">Não foi possível identificar o curso. Entre em contato com o suporte.</p>
