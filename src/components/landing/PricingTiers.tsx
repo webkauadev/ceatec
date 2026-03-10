@@ -33,10 +33,10 @@ const tiers: Tier[] = [
     liveTag: 'AO VIVO',
     subtitle: 'DJI Academy + CAAR – Regularização Completa',
     audience: 'Para começar regularizado no mercado.',
-    installment: '206,54',
+    installment: '222,34',
     pix: '1.997,00',
-    total: '2.478,48',
-    pixSavings: '481,48',
+    total: '2.668,08',
+    pixSavings: '671,08',
     bullets: [
       'DJI Academy – Agriculture',
       'CAAR (aplicação aeroagrícola remota)',

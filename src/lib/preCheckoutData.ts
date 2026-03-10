@@ -33,9 +33,9 @@ export const courses: Record<string, CourseData> = {
     slug: 'essencial',
     name: 'FORMAÇÃO ONLINE ESSENCIAL (AO VIVO)',
     subtitle: 'DJI Academy + CAAR – Regularização Completa',
-    installment: '206,54',
+    installment: '222,34',
     pixPrice: '1.997,00',
-    totalCredito: '2.478,48',
+    totalCredito: '2.668,08',
     bullets: [
       'DJI Academy – Agriculture',
       'CAAR (aplicação aeroagrícola remota)',
