@@ -35,7 +35,7 @@ export const courses: Record<string, CourseData> = {
     subtitle: 'DJI Academy + CAAR – Regularização Completa',
     installment: '222,34',
     pixPrice: '1.997,00',
-    totalCredito: '2.478,48',
+    totalCredito: '2.668,08',
     bullets: [
       'DJI Academy – Agriculture',
       'CAAR (aplicação aeroagrícola remota)',
