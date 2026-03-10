@@ -261,7 +261,7 @@ const PreCheckout = () => {
                     {method === 'cartao' ? 'Cartão' : 'Pix'}
                   </p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {method === 'cartao' ? 'até 12x sem juros' : 'à vista'}
+                    {method === 'cartao' ? 'até 12x no cartão' : 'à vista'}
                   </p>
                 </button>
               ))}
