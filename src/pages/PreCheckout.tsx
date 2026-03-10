@@ -275,11 +275,7 @@ const PreCheckout = () => {
                 <div className="flex items-center justify-center gap-2 flex-wrap">
                   <span className="text-sm text-muted-foreground">12x de</span>
                   <span className="text-3xl md:text-4xl font-bold text-foreground">R$ {course.installment}</span>
-                  <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[hsl(142_76%_92%)] text-[hsl(143_64%_24%)]">
-                    sem juros
-                  </span>
                 </div>
-                <p className="text-xs text-muted-foreground">Total no crédito: R$ {course.totalCredito}</p>
               </>
             ) : (
               <div>
