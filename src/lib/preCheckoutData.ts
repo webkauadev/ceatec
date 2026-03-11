@@ -84,7 +84,7 @@ export const courses: Record<string, CourseData> = {
     slug: 'profissional',
     name: 'FORMAÇÃO PROFISSIONAL CERTIFICADA',
     subtitle: 'Essencial + 3 Dias Intensivos Presenciais',
-    installment: '465,09',
+    installment: '500,41',
     pixPrice: '4.497,00',
     totalCredito: '5.581,08',
     bullets: [
