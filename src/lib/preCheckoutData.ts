@@ -136,8 +136,8 @@ export const courses: Record<string, CourseData> = {
       pix: 'https://pay.easyflow.digital/checkouts/offer/d73e9af1-58dd-4569-a09c-a574566ba691',
       byTurma: {
         vilhena: {
-          cartao: 'https://pay.easyflow.digital/checkouts/offer/ea4e6104-6088-4419-8c4e-4774cc42d5f9',
-          pix: 'https://pay.easyflow.digital/checkouts/offer/d73e9af1-58dd-4569-a09c-a574566ba691',
+          cartao: 'https://pay.easyflow.digital/checkouts/offer/395e0f69-6a96-4fd9-8f20-f88583e721be',
+          pix: 'https://pay.easyflow.digital/checkouts/offer/8ed1bc51-f122-4f30-9746-2c07806c9cb3',
         },
         jatai: {
           cartao: 'https://pay.easyflow.digital/checkouts/offer/89124207-108d-4e91-a4e9-50b90486d229',
