@@ -61,6 +61,14 @@ const Onboarding = () => {
       content_name: config?.courseName || 'Unknown Course',
       currency: 'BRL',
     });
+
+    // Google Ads conversion event
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'ads_conversion_purchase', {
+        content_name: config?.courseName || 'Unknown Course',
+        slug: slug || 'unknown',
+      });
+    }
   }, [slug, config]);
 
   // Error state
