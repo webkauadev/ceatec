@@ -270,7 +270,7 @@ export const PricingTiers = () => {
 
                 <div className="mb-5 pb-5 border-b border-border">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-sm font-medium text-muted-foreground">12x de</span>
+                    <span className="text-sm font-medium text-muted-foreground">Até 12x de</span>
                     <span className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
                       R$ {tier.installment}
                     </span>
