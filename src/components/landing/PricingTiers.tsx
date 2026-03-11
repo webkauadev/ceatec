@@ -130,10 +130,10 @@ const tiers: Tier[] = [
     level: 'FORMAÇÃO EXPERT',
     subtitle: 'Profissional + Especialização em Mapeamento Agrícola',
     audience: 'Para virar especialista e aumentar ticket.',
-    installment: '506,46',
+    installment: '439,13',
     pix: '4.897,00',
-    total: '6.077,52',
-    pixSavings: '1.180,52',
+    total: '5.269,55',
+    pixSavings: '372,55',
     upsellNote: 'Apenas +R$ 400 vs Profissional',
     bullets: [
       'Tudo do Profissional',
