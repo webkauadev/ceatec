@@ -3,6 +3,12 @@ import { useParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, MessageCircle, BookOpen, Users, ArrowRight } from 'lucide-react';
 import { trackPurchase, trackEvent, captureUTMParams } from '@/lib/tracking';
+
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 import logoCeatec from '@/assets/logo-ceatec.png';
 
 interface OnboardingConfig {
