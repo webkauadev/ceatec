@@ -6,7 +6,7 @@ const faqs = [
   { q: 'O curso é gravado?', a: 'Não. As aulas são ao vivo com interação direta com os instrutores.' },
   { q: 'Vou operar drone no presencial?', a: 'Sim. No Profissional e no Expert você executa prática supervisionada com drones DJI Agras.' },
   { q: 'O mapeamento é prático?', a: 'Você aprende voo, processamento com DJI Terra e interpretação com foco técnico e aplicação no campo.' },
-  { q: 'Posso parcelar em quantas vezes?', a: 'Até 12x sem juros no cartão de crédito. Também aceitamos Pix à vista com desconto.' },
+  { q: 'Posso parcelar em quantas vezes?', a: 'Até 12x no cartão de crédito. Também aceitamos Pix à vista com desconto.' },
   { q: 'Tem desconto para pagamento à vista?', a: 'Sim! O pagamento via Pix tem desconto em relação ao parcelamento. A economia varia por plano.' },
   { q: 'Qual o retorno financeiro de quem se forma?', a: 'Pilotos certificados podem faturar a partir de R$ 15–30/hectare. Com 150ha/mês, a formação se paga no primeiro mês de operação.' },
 ];

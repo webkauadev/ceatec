@@ -64,7 +64,7 @@ export const Hero = () => {
                 <ArrowRight className="w-5 h-5" />
               </Button>
               <p className="text-xs text-white/40 mt-3">
-                Pagamento em até 12x sem juros no cartão. Pix disponível à vista.
+                Pagamento em até 12x no cartão. Pix disponível à vista.
               </p>
             </div>
 
