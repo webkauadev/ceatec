@@ -236,7 +236,7 @@ export const PricingTiers = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-start">
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {tiers.map((tier) => (
             <div
               key={tier.level}
