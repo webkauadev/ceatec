@@ -150,9 +150,9 @@ export const courses: Record<string, CourseData> = {
     slug: 'expert',
     name: 'FORMAÇÃO EXPERT',
     subtitle: 'Profissional + Especialização em Mapeamento Agrícola',
-    installment: '439,13',
+    installment: '544,99',
     pixPrice: '4.897,00',
-    totalCredito: '5.269,55',
+    totalCredito: '6.539,88',
     bullets: [
       'Tudo do Profissional',
       'Mapeamento RGB e multispectral',
