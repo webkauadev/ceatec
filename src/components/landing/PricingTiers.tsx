@@ -280,7 +280,7 @@ export const PricingTiers = () => {
                   </p>
                   {tier.pixSavings && (
                     <p className="text-xs font-medium text-primary/80 mt-0.5">
-                      Economize R$ {tier.pixSavings} no Pix
+                      Economize até R$ {tier.pixSavings} no Pix
                     </p>
                   )}
                   {tier.upsellNote && (
