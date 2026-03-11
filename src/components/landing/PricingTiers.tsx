@@ -76,7 +76,7 @@ const tiers: Tier[] = [
     level: 'FORMAÇÃO PROFISSIONAL CERTIFICADA',
     subtitle: 'Essencial + 3 Dias Intensivos Presenciais',
     audience: 'Para sair pronto pro campo com prática real.',
-    installment: '465,09',
+    installment: '500,41',
     pix: '4.497,00',
     total: '5.581,08',
     pixSavings: '1.084,08',
